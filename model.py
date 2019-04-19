@@ -58,7 +58,7 @@ def make_model():
 
     conv_17 = Conv2D(filters=1024, kernel_size=(3, 3), strides=1, padding='same', activation='relu', name='conv_17')(route_2)
     bn_17 = BatchNormalization(name='bn_17')(conv_17)
-    conv_18 = Conv2D(filters=75, kernel_size=(1, 1), strides=1, padding='same', activation='relu', name='conv_18')(bn_17)
+    conv_18 = Conv2D(filters=75, kernel_size=(1, 1), strides=1, padding='same', activation='None', name='output')(bn_17)
 
     return Model(inputs=x, outputs=[conv_18])
 
