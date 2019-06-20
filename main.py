@@ -1,6 +1,6 @@
 from model import make_model
 import numpy as np
-
+import os
 
 model = make_model()
 
@@ -11,5 +11,8 @@ model.compile('sgd', 'mse')  # TODO: actual loss implementation
 
 model.fit(x, y)
 
+# save trained model to Model folder
+os.mkdir('Model')
 model.save('Model/complex_yolo.h5')
+
 print('Done!')
