@@ -1,8 +1,6 @@
 from keras.models import Model
 from keras.layers import Input, Conv2D, BatchNormalization, MaxPool2D, Reshape, Concatenate
 
-import tensorflow as tf
-
 
 def make_model():
     x = Input(shape=(1024, 512, 3), name='input')
